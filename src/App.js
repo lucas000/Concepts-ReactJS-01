@@ -34,17 +34,20 @@ function App() {
         {repositories.map(repositorie => {
           return (
             <li key={repositorie.id}>
-              {repositorie.title}
-
               <button onClick={() => handleRemoveRepository(repositorie.id)}>
                 Remover
               </button>
+              {repositorie.title}
             </li>
           )})
         }
       </ul>
 
-      <button onClick={handleAddRepository}>Adicionar</button>
+      <button
+        className="btn-add"
+        onClick={handleAddRepository}>
+        Adicionar
+      </button>
     </div>
   );
 }
